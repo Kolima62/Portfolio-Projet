@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --text-color: white;
+  --text-color2: black;
+  --main-color: #149414;
+  --background-color: black;
+  --background-color2: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* Box-Sizing:border-box permet a la largeur et la hauteur des élément d'être exactement ce que l'on a défini, le padding et la bordure 
+  seront a l'intérieur des dimensions définies. */
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62%;
+  /* cache ce qui dépasse horizontalement */
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: var(--background-color);
+  display: flex;
+  /* équilibre les élément de manière uniforme */
+  justify-content: space-between;
+  align-items: center;
+  /* z-index permet de choisir quel élément passe au dessus de quel élément, l'élément avec la valeur
+  z-index la plus élevée passera au dessus de l'autre */
+  z-index: 100;
+}
+
+.logo {
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: default;
+}
+
+.navbar a {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-left: 3rem;
+  transition: 0.5s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+  transform: translateX(100);
+  text-shadow: 0 0 1rem;
+}
+
+#menu {
+  color: var(--text-color);
+  font-size: 3rem;
+  display: none;
+  cursor: pointer;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 10% 2rem;
+}
+
+.acceuil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenu_acceuil h1 {
+  color: var(--main-color);
+  font-size: 5rem;
+  font-weight: bold;
+  /* Line Height ajoute de l'écrat entre les lignes */
+  line-height: 1.3;
+}
+
+.contenu_acceuil h3 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+p {
+  padding-top: 3rem;
+}
+
+.contenu_acceuil p {
+  font-size: 1.7rem;
+}
+
+span {
+  color: var(--main-color);
+}
+
+.acceuil-img img {
+  width: 30vw;
+  border-radius: 25%;
+}
+
+.reseaux a {
+  color: var(--main-color);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  border: 0.1rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2.5rem;
+  margin: 3rem;
+  transition: 0.5s ease;
+}
+
+.reseaux a:hover {
+  color: var(--background-color2);
+  background: var(--main-color);
+  /* box-shadow affiche des ombres autour de l'ément ciblé avec taille au format "droite, bas, gauche, haut, 'couleur(optionnel)'" 
+  Les couleurs peuvent être choisies individuellement en les affichant juste après la taille choisi pour le côté en question*/
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+  font-size: 1.2rem;
+  color: var(--background-color);
+  background-color: var(--main-color);
+  display: inline-block;
+  padding: 1.5rem;
+  border-radius: 4rem;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--background-color2);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.contenu_cv .btn {
+  margin-top: 3rem;
+}
+
+.apropos {
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap permet de mettre de l'espace entre les élément de la div parente, il 
+  fonctionne normalement avec des lignes et colonnes définies en même temps */
+  gap: 2rem;
+}
+
+.image_apropos img {
+  width: 30vw;
+}
+
+.contenu_apropos h2 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.contenu_apropos p {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.contenu_apropos ul {
+  list-style: none;
+}
+
+.contenu_apropos li {
+  color: var(--main-color);
+  font-size: 2rem;
+}
+
+#listes {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 3rem;
+}
+
+.contenu_cv h2 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.image_cv img {
+  height: 85vh;
+}
+.image_cv img:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+  box-shadow: 0 0 3rem 1rem var(--main-color);
+}
+.image_cv img:not(:hover) {
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.cv {
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap permet de mettre de l'espace entre les élément de la div parente, il 
+  fonctionne normalement avec des lignes et colonnes définies en même temps */
+  gap: 2rem;
+}
+
+.projet h2 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contenu_projet {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr) définit le nombre de colonnes 
+  dans la grille et la taille de chaque colonne. Dans ce cas, il y a trois colonnes (repeat(3, ...)), et 
+  chaque colonne aura la même taille (1fr). "fr" signifie fraction de l'espace disponible, donc
+  chaque colonne occupera une fraction égale de l'espace disponible dans le conteneur. */
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 2rem;
+}
+
+.contenu_projet .projet-box {
+  border-radius: 10%;
+  overflow: hidden;
+  border: solid 0.1rem var(--main-color);
+  box-shadow: 0 0 1rem var(--main-color);
+  width: 100%;
+}
+.contenu_projet .projet-box:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.contenu_projet .projet-box:not(:hover) {
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.contenu_projet .projet-box:hover h4 {
+  color: var(--main-color);
+  transition: 0.5s;
+}
+.contenu_projet .projet-box:not(:hover) h4 {
+  color: var(--text-color);
+  transition: 0.5s;
+}
+
+.projet-box img {
+  width: 100%;
+}
+
+.projet-box .projet_info {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.projet_info h4 {
+  font-size: 3rem;
+}
+.projet_info h4:hover {
+  font-size: 3rem;
+}
+.projet_info p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  margin-bottom: 7rem;
+}
+
+.contact h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.contact form .input-contact {
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap permet grace au display flex d'afficher le contenu sur plusieurs lignes */
+  flex-wrap: wrap;
+}
+.contact form .input-contact input,
+.contact form textarea {
+  width: 96%;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  background-color: var(--background-color2);
+  border-radius: 2rem;
+  margin: 1rem;
+  color: var(--text-color2);
+}
+
+.contact form .input-contact input {
+  width: 43%;
+}
+
+/* Empêche l'uilisateur de changer la taille horizontale de la fenêtre */
+.contact form textarea {
+  resize: vertical;
+}
+
+/* Breakpoints */
+
+/* Mode tablette  */
+@media only screen and (max-width: 981px) {
+  .header {
+    padding: 2rem 3%;
+  }
+
+  section {
+    padding: 10rem 3% 2rem;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--background-color);
+    border-top: 0.2rem solid var(--main-color);
+    box-shadow: 0 0.2rem 1rem var(--main-color);
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 1.5rem;
+    margin: 3rem 0;
+  }
+
+  #menu {
+    display: block;
+  }
+
+  .acceuil-img {
+    display: none;
+  }
+
+  .contenu_projet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image_apropos {
+    display: none;
+  }
+}
+
+/* Mode mobile */
+@media only screen and (max-width: 391px) {
+  html {
+    font-size: 50%;
+  }
+
+  .image_cv img {
+    width: 100%;
+    /* Maintient le ratio de l'image */
+    height: auto;
+  }
+
+  .contact form .input-contact input {
+    width: 100%;
+  }
+
+  .contenu_projet {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

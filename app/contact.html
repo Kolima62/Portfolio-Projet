@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- lien des icones -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Contact</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="logo">M <span>K</span></a>
+      <!-- icone burger -->
+      <i class="bx bx-menu" id="menu"></i>
+
+      <nav class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="cv.html">CV</a>
+        <a href="projet.html">Projets</a>
+        <a href="contact.html" class="active">Contacts</a>
+      </nav>
+    </header>
+
+    <section class="contact" id="page_contact">
+      <div class="contenu_contact">
+        <h2><span>Contactez</span>-moi</h2>
+        <form action="#">
+          <h3>Par mail</h3>
+          <div class="input-contact">
+            <input type="text" placeholder="Nom complet" required />
+            <input type="email" placeholder="Adresse Mail" required />
+          </div>
+          <div class="input-contact">
+            <input type="tel" placeholder="Téléphone (optionnel)" />
+            <input type="text" placeholder="Objet" required />
+          </div>
+          <textarea
+            name="mail-text"
+            id="mail-text"
+            cols="30"
+            rows="10"
+            placeholder="Votre message..."
+            required
+          ></textarea>
+          <input type="submit" value="Envoyer le message" class="btn" />
+        </form>
+        <div class="reseaux">
+          <h3>Ou via mes réseaux sociaux</h3>
+          <a href="https://github.com/Kolima62"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/malik-kouch-9547371ab"
+            ><i class="bx bxl-linkedin-square"></i
+          ></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+        </div>
+      </div>
+    </section>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
