@@ -63,7 +63,6 @@ body {
 .navbar a:hover,
 .navbar a.active {
   color: var(--main-color);
-  transform: translateX(100);
   text-shadow: 0 0 1rem;
 }
 
@@ -93,7 +92,7 @@ section {
   line-height: 1.3;
 }
 
-.contenu_acceuil h3 {
+.contenu_acceuil h2 {
   font-size: 3rem;
   font-weight: bold;
 }
@@ -171,7 +170,7 @@ span {
   width: 30vw;
 }
 
-.contenu_apropos h2 {
+.contenu_apropos h1 {
   font-size: 4rem;
   text-align: center;
   margin-bottom: 3rem;
@@ -196,7 +195,7 @@ span {
   padding-top: 3rem;
 }
 
-.contenu_cv h2 {
+.contenu_cv h1 {
   font-size: 4rem;
   text-align: center;
   margin-bottom: 3rem;
@@ -225,7 +224,7 @@ span {
   gap: 2rem;
 }
 
-.projet h2 {
+.projet h1 {
   font-size: 4rem;
   text-align: center;
   margin-bottom: 3rem;
@@ -259,11 +258,11 @@ span {
   transition: 0.5s;
 }
 
-.contenu_projet .projet-box:hover h4 {
+.contenu_projet .projet-box:hover h2 {
   color: var(--main-color);
   transition: 0.5s;
 }
-.contenu_projet .projet-box:not(:hover) h4 {
+.contenu_projet .projet-box:not(:hover) h2 {
   color: var(--text-color);
   transition: 0.5s;
 }
@@ -282,10 +281,10 @@ span {
   justify-content: center;
 }
 
-.projet_info h4 {
+.projet_info h2 {
   font-size: 3rem;
 }
-.projet_info h4:hover {
+.projet_info h2:hover {
   font-size: 3rem;
 }
 .projet_info p {
@@ -297,7 +296,7 @@ span {
   text-align: center;
 }
 
-.contact h2 {
+.contact h1 {
   font-size: 4rem;
   margin-bottom: 3rem;
   text-align: center;
@@ -309,7 +308,7 @@ span {
   margin-bottom: 7rem;
 }
 
-.contact h3 {
+.contact h2 {
   margin-bottom: 1rem;
   font-size: 2rem;
 }
@@ -397,14 +396,17 @@ span {
     font-size: 50%;
   }
 
+  .contact form .input-contact input {
+    width: 100%;
+  }
+}
+
+/* Tailles spécifiques */
+@media only screen and (max-width: 448px) {
   .image_cv img {
     width: 100%;
     /* Maintient le ratio de l'image */
     height: auto;
-  }
-
-  .contact form .input-contact input {
-    width: 100%;
   }
 
   .contenu_projet {
